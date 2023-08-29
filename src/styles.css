@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@font-face {
+  font-family: "PP Editorial New";
+  font-weight: 400;
+  src: url("/fonts/PPEditorialNew-Regular.woff2") format("woff2"),
+    url("/fonts/PPEditorialNew-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  font-weight: 700;
+  src: url("/fonts/PPEditorialNew-Bold.woff2") format("woff2"),
+    url("/fonts/PPEditorialNew-Bold.woff") format("woff");
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+:root {
+  --side: 1rem;
+  --column: 80rem;
+  --accent: hsl(0, 7%, 5%);
+}
+
+body {
+  font-family: "PP Editorial New", system-ui, -apple-system, sans-serif;
+  color: #ccc;
+  background: #bde3ff;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background: var(--accent);
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-family: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
+    "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+  color: white;
+  margin: 0 0 0.5em 0;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin-top: 1em;
+}
+
+a {
+  color: inherit;
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.column {
+  padding-left: var(--side);
+  padding-right: var(--side);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--column);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --side: 4rem;
+  }
+}
